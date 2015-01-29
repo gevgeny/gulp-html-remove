@@ -15,7 +15,6 @@ module.exports = function (opts) {
             return value.map(function (value) { return format('[%s="%s"]', name, value); }).join();
         });
     }
-    console.log('selectors', selectors);
 
     return through.obj(function (file, enc, cb) {
         if (file.isStream()) {
