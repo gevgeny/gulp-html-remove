@@ -32,8 +32,21 @@ gulp.task('case5', function () {
         .pipe(gulp.dest('./test/tmp'));
 });
 
+gulp.task('case6', function () {
+    return gulp.src('./test/examples/case6.html')
+        .pipe(remove('[my-attr][my-attr!="foo"]'))
+        .pipe(gulp.dest('./test/tmp'));
+});
 
-gulp.task('test', ['case1', 'case2', 'case3', 'case4', 'case5'], function () {
+gulp.task('case7', function () {
+    return gulp.src('./test/examples/case7.html')
+        .pipe(remove('.to-remove'))
+        .pipe(gulp.dest('./test/tmp'));
+});
+
+
+
+gulp.task('test', ['case1', 'case2', 'case3', 'case4', 'case6', 'case7'], function () {
     return gulp.src('./test/*.js')
         .pipe(mocha());
 });

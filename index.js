@@ -8,7 +8,9 @@ module.exports = function (opts) {
     var selectors;
     
     opts = opts || [];
-    if (_.isArray(opts.attrs)) {
+    if (_.isString(opts)) {
+        selectors = [opts];
+    } else if (_.isArray(opts.attrs)) {
         selectors = opts.attrs.map(function (attr) { return format('[%s]', attr) });
     } else if (_.isObject(opts.attrs)) {
         selectors  = _.map(opts.attrs, function (value, name) {

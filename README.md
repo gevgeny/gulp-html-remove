@@ -8,7 +8,29 @@
 ```
 npm install --save-dev gulp-html-remove
 ```
-## Examples
+## Usage
+
+Removing nodes by CSS selectors (See #[cheerio ](https://https://github.com/cheeriojs/cheerio) to know about supported selectors).
+
+```js
+var gulp = require('gulp'),
+    remove = require('gulp-html-remove');
+
+gulp.task('default', function () {
+    
+    // Will remove any nodes with "to-remove" class.
+    gulp.src('./templates/**/*.html')
+        .pipe(remove('.to-remove'))
+        .pipe(gulp.dest('./tmp'));
+        
+    // Will remove all nodes with "my-attr" attribute not equals to "foo"
+    gulp.src('[my-attr][my-attr!="foo"]')
+        .pipe(remove({ attrs : ['to-remove1', 'to-remove2'] }))
+        .pipe(gulp.dest('./tmp'));
+});
+```
+
+Removing nodes by attributes
 
 ```js
 var gulp = require('gulp'),
