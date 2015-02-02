@@ -1,7 +1,7 @@
 {
   "name": "gulp-html-remove",
   "description": "Cleans out HTML nodes by CSS selectors or attributes.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/gevgeny/gulp-html-remove",
   "author": {
     "name": "Eugene Gluhotorenko",
