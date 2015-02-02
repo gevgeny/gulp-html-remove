@@ -10,7 +10,7 @@ npm install --save-dev gulp-html-remove
 ```
 ## Usage
 
-Removing nodes by CSS selectors (See #[cheerio ](https://https://github.com/cheeriojs/cheerio) to know about supported selectors).
+Remove nodes by CSS selectors (See [cheerio](https://https://github.com/cheeriojs/cheerio) to know about supported selectors).
 
 ```js
 var gulp = require('gulp'),
@@ -30,7 +30,7 @@ gulp.task('default', function () {
 });
 ```
 
-Removing nodes by attributes
+Remove nodes by attributes
 
 ```js
 var gulp = require('gulp'),
