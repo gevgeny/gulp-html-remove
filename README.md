@@ -24,8 +24,8 @@ gulp.task('default', function () {
         .pipe(gulp.dest('./tmp'));
         
     // Will remove all nodes with "my-attr" attribute does not equal to "foo"
-    gulp.src('[my-attr][my-attr!="foo"]')
-        .pipe(remove({ attrs : ['to-remove1', 'to-remove2'] }))
+    gulp.src(./templates/**/*.html')
+        .pipe(remove('[my-attr][my-attr!="foo"]'))
         .pipe(gulp.dest('./tmp'));
 });
 ```
