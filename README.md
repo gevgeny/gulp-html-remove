@@ -1,7 +1,7 @@
 #[gulp](https://github.com/wearefractal/gulp)-html-remove
 ==============
 
-> Cleans out HTML nodes which contain specified attributes.
+> Cleans out HTML nodes by CSS selectors or attributes. 
 
 ## Installation
 
